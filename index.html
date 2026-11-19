@@ -102,7 +102,7 @@
   <div class="wrap">
     <div class="sec-h"><div><p class="k">소식·자료</p><h2 id="s-news">유스에이블코리아 소식</h2></div><a class="more" href="news.html">소식 전체 보기</a></div>
     <div class="grid g2">
-      <div><h3 style="margin:0 0 12px;font-size:19px">공지사항</h3><ul class="posts">{% assign ps = site.categories.notice | sort: "pinned" | reverse %}{% for p in site.categories.notice limit: 3 %}<li><a href="{{ p.url | relative_url }}">{% if p.pinned %}<span class=pin>고정</span>{% endif %}<span class="t">{{ p.title }}</span><span class="d">{{ p.date | date: "%Y. %-m. %-d." }}</span></a></li>{% endfor %}</ul></div>
+      <div><h3 style="margin:0 0 12px;font-size:19px">공지사항</h3><ul class="posts">{% for p in site.categories.notice limit: 3 %}<li><a href="{{ p.url | relative_url }}">{% if p.pinned %}<span class=pin>고정</span>{% endif %}<span class="t">{{ p.title }}</span><span class="d">{{ p.date | date: "%Y. %-m. %-d." }}</span></a></li>{% endfor %}</ul></div>
       <div><h3 style="margin:0 0 12px;font-size:19px">활동 이야기</h3><ul class="posts">{% for p in site.categories.story limit: 3 %}<li><a href="{{ p.url | relative_url }}"><span class="badge b-cat">활동 이야기</span><span class="t">{{ p.title }}</span><span class="d">{{ p.date | date: "%Y. %-m. %-d." }}</span></a></li>{% endfor %}</ul></div>
     </div>
   </div>
